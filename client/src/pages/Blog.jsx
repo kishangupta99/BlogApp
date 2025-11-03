@@ -15,12 +15,12 @@ const Blog = () => {
 
   const {id} = useParams()
 
-  const {axios} = useAppContext()
+  const {axios} = useAppContext();
 
-  const [data, setData] = useState(null)
-  const [comments, setComments] = useState([])
-  const [name, setName] = useState('')
-  const [content, setContent] = useState('')
+  const [data, setData] = useState(null);
+  const [comments, setComments] = useState([]);
+  const [name, setName] = useState('');
+  const [content, setContent] = useState('');
 
   const fetchBlogData = async ()=> {
     try {
