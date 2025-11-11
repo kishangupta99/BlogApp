@@ -12,7 +12,7 @@ await connectDB()
 
 //Middlewares
 app.use(cors({
-    origin: "https://frontend-blog-app-five.vercel.app", // ✅ your frontend domain
+    origin: "*", // ✅ your frontend domain
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // if using cookies or auth headers
 }));
