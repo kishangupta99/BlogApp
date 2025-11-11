@@ -11,12 +11,12 @@ const app = express();
 await connectDB()
 
 //Middlewares
-app.use(cors(
-    {
-        origin: '*',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    }
-));
+app.use(cors({
+    origin: "*",             // Allow all origins
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allow these HTTP methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Optional: allow custom headers
+}));
+
 app.use(express.json())
 
 //Routes
