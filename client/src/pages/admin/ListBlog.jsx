@@ -13,8 +13,8 @@ const ListBlog = () => {
   const fetchBlogs = async ()=> {
     try {
       console.log("run");
-      
-      const { data } = await axios.get("http://localhost:3000/api/blog/all");
+
+      const { data } = await axios.get("https://blog-app-ql1n.vercel.app/api/blog/all");
       console.log("Fetched blogs:", data);
       
       if(data.success){
