@@ -12,10 +12,11 @@ await connectDB()
 
 //Middlewares
 app.use(cors({
-    origin: "*",             // Allow all origins
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allow these HTTP methods
-    allowedHeaders: ["Content-Type", "Authorization"], // Optional: allow custom headers
+    origin: "https://frontend-blog-app-five.vercel.app", // ✅ your frontend domain
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // if using cookies or auth headers
 }));
+
 
 app.use(express.json())
 
